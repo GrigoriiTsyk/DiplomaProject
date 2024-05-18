@@ -10,7 +10,7 @@ def create_user(status, username, password):
     hashed_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
 
     # Подключение к нашей базе данных
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('Database/database.db')
     c = conn.cursor()
 
     # Добавление нового пользователя
@@ -22,3 +22,4 @@ def create_user(status, username, password):
 
 # Замените 'admin' и 'your_password' на желаемые имя пользователя и пароль
 #create_user(0, 'admin', 'your_password')
+# create_user(1, 'doctor', 'doctor')
